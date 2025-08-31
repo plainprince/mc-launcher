@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Launcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="assets/minecraft-icon.svg" alt="Minecraft" class="logo-icon">
+                    <span class="logo-text">Minecraft Launcher</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-secondary" id="settingsBtn">⚙️ Settings</button>
+                <button class="btn btn-secondary" id="minimizeBtn">−</button>
+                <button class="btn btn-danger" id="closeBtn">×</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="profile-section">
+                    <div class="profile-avatar" id="profileAvatar">
+                        <span id="profileInitials">?</span>
+                    </div>
+                    <div class="profile-info">
+                        <span class="profile-name" id="profileName">Not logged in</span>
+                        <span class="profile-status" id="profileStatus">Offline</span>
+                    </div>
+                    <button class="btn btn-primary btn-small" id="loginBtn">Login</button>
+                </div>
+
+                <nav class="nav">
+                    <a href="#home" class="nav-item active" data-tab="home">
+                        🏠 Home
+                    </a>
+                    <a href="#instances" class="nav-item" data-tab="instances">
+                        📁 Instances
+                    </a>
+                    <a href="#mods" class="nav-item" data-tab="mods">
+                        🧩 Mods
+                    </a>
+                    <a href="#logs" class="nav-item" data-tab="logs">
+                        📋 Logs
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <div class="content">
+                <!-- Home Tab -->
+                <div class="tab-content active" id="home">
+                    <div class="instance-card">
+                        <div class="instance-header">
+                            <div class="instance-info">
+                                <h2 class="instance-name">Fabric 1.21.4</h2>
+                                <p class="instance-description">Modded Minecraft with performance optimizations</p>
+                                <div class="instance-stats">
+                                    <span class="stat">
+                                        <span class="stat-value" id="modCount">Loading...</span>
+                                        <span class="stat-label">Mods</span>
+                                    </span>
+                                    <span class="stat">
+                                        <span class="stat-value">1.21.4</span>
+                                        <span class="stat-label">Version</span>
+                                    </span>
+                                    <span class="stat">
+                                        <span class="stat-value">Fabric</span>
+                                        <span class="stat-label">Loader</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="instance-actions">
+                                <div class="launch-controls">
+                                    <button class="btn btn-primary btn-large" id="launchBtn">
+                                        <span class="btn-icon">🚀</span>
+                                        Launch Game
+                                    </button>
+                                    <button class="btn btn-danger btn-large hidden" id="killBtn">
+                                        <span class="btn-icon">🛑</span>
+                                        Stop Game
+                                    </button>
+                                </div>
+                                <div class="status-indicator">
+                                    <div class="status-dot" id="statusDot"></div>
+                                    <span class="status-text" id="statusText">Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-section hidden" id="progressSection">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="progress-info">
+                                <span id="progressText">Preparing launch...</span>
+                                <span id="progressPercent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button class="action-card" id="openInstanceBtn">
+                            <div class="action-icon">📁</div>
+                            <div class="action-content">
+                                <h3>Open Instance Folder</h3>
+                                <p>Access game files and configurations</p>
+                            </div>
+                        </button>
+                        <button class="action-card" id="viewLogsBtn">
+                            <div class="action-icon">📋</div>
+                            <div class="action-content">
+                                <h3>View Logs</h3>
+                                <p>Check game logs and debug output</p>
+                            </div>
+                        </button>
+                        <button class="action-card" id="manageModsBtn">
+                            <div class="action-icon">🧩</div>
+                            <div class="action-content">
+                                <h3>Manage Mods</h3>
+                                <p>Add, remove, or configure mods</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Instances Tab -->
+                <div class="tab-content" id="instances">
+                    <h2>Instances</h2>
+                    <div class="instances-grid">
+                        <div class="instance-card-small active">
+                            <div class="instance-icon">🧩</div>
+                            <div class="instance-details">
+                                <h3>Fabric 1.21.4</h3>
+                                <p>Current instance</p>
+                            </div>
+                            <div class="instance-status">
+                                <span class="status-badge status-active">Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mods Tab -->
+                <div class="tab-content" id="mods">
+                    <div class="mods-header">
+                        <h2>Installed Mods</h2>
+                        <button class="btn btn-primary" id="refreshModsBtn">🔄 Refresh</button>
+                    </div>
+                    <div class="mods-list" id="modsList">
+                        <!-- Mods will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Logs Tab -->
+                <div class="tab-content" id="logs">
+                    <div class="logs-header">
+                        <h2>Game Logs</h2>
+                        <div class="logs-controls">
+                            <button class="btn btn-secondary" id="refreshLogsBtn">🔄 Refresh</button>
+                            <button class="btn btn-secondary" id="clearLogsBtn">🗑️ Clear</button>
+                        </div>
+                    </div>
+                    <div class="logs-container">
+                        <pre class="logs-content" id="logsContent">No logs available. Launch the game to see logs here.</pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Settings Modal -->
+        <div class="modal hidden" id="settingsModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Settings</h2>
+                    <button class="btn btn-ghost" id="closeSettingsBtn">×</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Settings content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Console/Output -->
+        <div class="console" id="console">
+            <div class="console-header">
+                <span>Console Output</span>
+                <button class="btn btn-ghost btn-small" id="toggleConsoleBtn">−</button>
+            </div>
+            <div class="console-content" id="consoleContent">
+                <div class="console-line">Ready to launch...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

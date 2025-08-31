@@ -1,0 +1,19 @@
+{
+  "name": "mc-launcher",
+  "module": "index.js",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "enquirer": "^2.4.1",
+    "find-process": "^2.0.0",
+    "fkill": "^9.0.0",
+    "minecraft-java-core": "^4.1.5",
+    "open": "^10.2.0"
+  }
+}

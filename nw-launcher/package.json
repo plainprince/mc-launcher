@@ -1,0 +1,40 @@
+{
+  "name": "minecraft-launcher-nw",
+  "version": "1.0.0",
+  "description": "Minecraft Launcher built with NW.js",
+  "main": "index.html",
+  "private": true,
+  "window": {
+    "title": "Minecraft Launcher",
+    "width": 1000,
+    "height": 700,
+    "min_width": 800,
+    "min_height": 600,
+    "icon": "assets/minecraft-icon.svg",
+    "position": "center",
+    "resizable": true,
+    "show": true,
+    "show_in_taskbar": true,
+    "frame": true,
+    "kiosk": false,
+    "toolbar": false
+  },
+  "webkit": {
+    "plugin": false,
+    "double_tap_to_zoom_enabled": false
+  },
+  "scripts": {
+    "start": "nw .",
+    "dev": "nw . --enable-logging"
+  },
+  "dependencies": {
+    "enquirer": "^2.4.1",
+    "find-process": "^2.0.0",
+    "fkill": "^9.0.0",
+    "minecraft-java-core": "^4.1.5",
+    "open": "^10.2.0"
+  },
+  "devDependencies": {
+    "nw": "^0.92.0"
+  }
+}
