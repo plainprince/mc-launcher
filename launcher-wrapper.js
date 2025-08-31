@@ -99,9 +99,18 @@ class MinecraftLauncher extends EventEmitter {
             quiet: defaultOptions.quiet,
 
             mods: {
-                prismMods: "/Users/simeonkummer/Library/Application Support/PrismLauncher/instances/1.21.4 no hacks/.minecraft/mods",
-                customMods: "/Users/simeonkummer/dev/mc-launcher/custom-mod/build/libs",
-                excludedMods: ["naturalmotionblur", "OpenBoatUtils"]
+                downloadUrls: [
+                    // Performance mods
+                    "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Iq9qGzm9/lithium-fabric-mc1.21.4-0.14.3.jar", // Lithium
+                    "https://cdn.modrinth.com/data/P7dR8mSH/versions/DXTJz4V3/fabric-api-0.110.5%2B1.21.4.jar", // Fabric API
+                    "https://cdn.modrinth.com/data/AANobbMI/versions/JGfwEgJ6/sodium-fabric-0.6.5%2Bmc1.21.4.jar", // Sodium
+                    
+                    // Visual enhancement mods that don't require config
+                    "https://cdn.modrinth.com/data/zV5r3pPn/versions/vYXe74OW/3dskinlayers-fabric-1.7.5-mc1.21.4.jar", // 3D Skin Layers
+                    "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/yGOJFWmG/chat_heads-0.13.7-fabric-1.21.4.jar", // Chat Heads
+                    "https://cdn.modrinth.com/data/1IjD5062/versions/F6Vn3LV4/continuity-3.1.0%2B1.21.4.jar", // Continuity
+                ],
+                customMods: "/Users/simeonkummer/dev/mc-launcher/custom-mod/build/libs"
             }
         };
 

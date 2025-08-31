@@ -306,7 +306,7 @@ class Launch extends EventEmitter {
     async setupMods() {
         if (!this.options.mods) return;
 
-        const { prismMods, customMods, excludedMods = [] } = this.options.mods;
+        const { downloadUrls = [], customMods } = this.options.mods;
         const instancePath = this.options.instance ? 
             path.join(this.options.path, 'instances', this.options.instance) : 
             this.options.path;
@@ -319,29 +319,33 @@ class Launch extends EventEmitter {
 
         this.emit('data', '🔧 Setting up mods...\n');
 
-        // Copy mods from PrismLauncher, excluding specified mods
-        if (prismMods && fs.existsSync(prismMods)) {
-            const prismModFiles = fs.readdirSync(prismMods).filter(file => file.endsWith('.jar'));
-            for (const modFile of prismModFiles) {
-                const shouldExclude = excludedMods.some(excludedMod => 
-                    modFile.toLowerCase().includes(excludedMod.toLowerCase())
-                );
-                
-                if (!shouldExclude) {
-                    const sourcePath = path.join(prismMods, modFile);
-                    const destPath = path.join(modsDir, modFile);
+        // Download mods from URLs
+        if (downloadUrls.length > 0) {
+            this.emit('data', '⬇️  Downloading mods from URLs...\n');
+            const Downloader = require('./utils/Downloader');
+            const downloader = new Downloader();
+            
+            for (const url of downloadUrls) {
+                try {
+                    const fileName = url.split('/').pop().split('?')[0]; // Extract filename from URL
+                    const destPath = path.join(modsDir, fileName);
                     
-                    try {
-                        fs.copyFileSync(sourcePath, destPath);
-                        this.emit('data', `✅ Copied mod: ${modFile}\n`);
-                    } catch (error) {
-                        this.emit('data', `❌ Failed to copy mod ${modFile}: ${error.message}\n`);
+                    // Skip if mod already exists
+                    if (fs.existsSync(destPath)) {
+                        this.emit('data', `⏭️  Mod already exists: ${fileName}\n`);
+                        continue;
                     }
-                } else {
-                    this.emit('data', `⏭️  Skipped excluded mod: ${modFile}\n`);
+                    
+                    this.emit('data', `⬇️  Downloading: ${fileName}\n`);
+                    await downloader.downloadFile(url, modsDir, fileName);
+                    this.emit('data', `✅ Downloaded: ${fileName}\n`);
+                } catch (error) {
+                    this.emit('data', `❌ Failed to download mod from ${url}: ${error.message}\n`);
                 }
             }
         }
+
+
 
         // Copy custom mods
         if (customMods && fs.existsSync(customMods)) {

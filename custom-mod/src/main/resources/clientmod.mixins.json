@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.linkum.simeon.clientmod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "clientmod.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "MouseMixin",
+    "InGameHudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

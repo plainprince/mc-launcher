@@ -1,7 +1,6 @@
 plugins {
     id 'fabric-loom' version '1.7-SNAPSHOT'
     id 'maven-publish'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.23'
 }
 
 version = project.mod_version
@@ -24,7 +23,6 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 processResources {
@@ -85,13 +83,34 @@ publishing {
         // retrieving dependencies.
     }
 }
-compileKotlin {
-    kotlinOptions {
-        jvmTarget = "21"
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+// Task to copy the built mod to the Minecraft instance
+task copyToInstance(type: Copy) {
+    dependsOn build
+    from "${buildDir}/libs/${archivesBaseName}-${version}.jar"
+    into "${projectDir}/../minecraft/instances/Fabric1214/mods/"
+    
+    doFirst {
+        // Ensure the mods directory exists
+        file("${projectDir}/../minecraft/instances/Fabric1214/mods/").mkdirs()
+        
+        // Remove old versions of the mod
+        fileTree("${projectDir}/../minecraft/instances/Fabric1214/mods/").matching {
+            include "${archivesBaseName}-*.jar"
+        }.each { file ->
+            file.delete()
+        }
+    }
+    
+    doLast {
+        println "Copied ${archivesBaseName}-${version}.jar to Fabric1214 mods folder"
     }
 }
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "21"
-    }
-}
+
+// Make build automatically copy to instance
+build.finalizedBy(copyToInstance)

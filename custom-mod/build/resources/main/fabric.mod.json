@@ -1,33 +1,33 @@
 {
   "schemaVersion": 1,
-  "id": "crafttechclient",
+  "id": "clientmod",
   "version": "1.0-SNAPSHOT",
-  "name": "Crafttechclient",
-  "description": "Test-Description",
+  "name": "ClientMod",
+  "description": "A simple Minecraft 1.21.4 client mod",
   "authors": [
-    "redcrafter502"
+    "Simeon Kummer"
   ],
   "contact": {
-    "website": "Test-Website",
-    "repo": "https://github.com/redcrafter502/craft-tech-client"
+    "website": "https://linkum.de",
+    "repo": "https://github.com/linkum/clientmod"
   },
-  "license": "Apache-2.0 license",
-  "icon": "assets/crafttechclient/icon.png",
+  "license": "MIT",
+  "icon": "assets/clientmod/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.redcrafter502.crafttechclient.client.CrafttechclientClient"
+      "de.linkum.simeon.clientmod.client.ClientModClient"
     ],
     "main": [
-      "net.redcrafter502.crafttechclient.Crafttechclient"
+      "de.linkum.simeon.clientmod.ClientMod"
     ]
   },
   "mixins": [
-    "crafttechclient.mixins.json"
+    "clientmod.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.11",
     "fabric": "*",
-    "minecraft": ">=1.21"
+    "minecraft": "1.21.4"
   }
 }
