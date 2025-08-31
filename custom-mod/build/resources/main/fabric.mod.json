@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "crafttechclient",
+  "version": "1.0-SNAPSHOT",
+  "name": "Crafttechclient",
+  "description": "Test-Description",
+  "authors": [
+    "redcrafter502"
+  ],
+  "contact": {
+    "website": "Test-Website",
+    "repo": "https://github.com/redcrafter502/craft-tech-client"
+  },
+  "license": "Apache-2.0 license",
+  "icon": "assets/crafttechclient/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.redcrafter502.crafttechclient.client.CrafttechclientClient"
+    ],
+    "main": [
+      "net.redcrafter502.crafttechclient.Crafttechclient"
+    ]
+  },
+  "mixins": [
+    "crafttechclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric": "*",
+    "minecraft": ">=1.21"
+  }
+}
