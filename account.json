@@ -1,0 +1,46 @@
+{
+    "access_token": "eyJraWQiOiIwNDkxODEiLCJhbGciOiJSUzI1NiJ9.eyJ4dWlkIjoiMjUzNTQyNDQ1NzE3MTg2MyIsImFnZyI6IkNoaWxkIiwic3ViIjoiMjY4ZjBlZGYtZjBlZi00ZTRlLWI0MzMtODJjZmMzZTFlNzMyIiwiYXV0aCI6IlhCT1giLCJucyI6ImRlZmF1bHQiLCJyb2xlcyI6W10sImlzcyI6ImF1dGhlbnRpY2F0aW9uIiwiZmxhZ3MiOlsib3JkZXJzXzIwMjIiLCJtdWx0aXBsYXllciIsInR3b2ZhY3RvcmF1dGgiLCJtc2FtaWdyYXRpb25fc3RhZ2U0Il0sInByb2ZpbGVzIjp7Im1jIjoiNTY3ZjM2ZTQtODE5Yi00ZTdiLWFjOWItZjA2Zjc5NDM3ODM0In0sInBsYXRmb3JtIjoiUENfTEFVTkNIRVIiLCJwZmQiOlt7InR5cGUiOiJtYyIsImlkIjoiNTY3ZjM2ZTQtODE5Yi00ZTdiLWFjOWItZjA2Zjc5NDM3ODM0IiwibmFtZSI6InBsYWlucHJpbmNlZGV2In1dLCJuYmYiOjE3NTY2Mjc5MzAsImV4cCI6MTc1NjcxNDMzMCwiaWF0IjoxNzU2NjI3OTMwfQ.lXv0QRrbYsh_eSU3WJP1sK6PDNycQZ8oENM1_RYi2dz-tFCIFh7MseYjbZ0FGvpnQRKoyotgVM9vVtru3WhlRbrhvX1ELRf6eTNOy2hXGV_mIlBpUjvcPP2_qXllZ054aGB9vd6_p-2dPCXlpVvMOlNxLtt7nDJb6S0FRRPOwJ5hL6E6uC7HEr2vEEazO-hTxkfiGzEJGMG23RIZI7gGsU0aRUzyofK7N0BAzZRb1SsYNph_4kTrgLu1XsjI_ascEDPSMrIuTu7uI65KVoYnf7W2uEYhTQZnZFNkibjOSV4GFLFtkCanfY-y6t2tpOBIBGN8p6CJWdzHuxmQob9JCA",
+    "client_token": "782630b723cedb544d1a5efbd49c33fa",
+    "uuid": "567f36e4819b4e7bac9bf06f79437834",
+    "name": "plainprincedev",
+    "refresh_token": "M.C518_BAY.0.U.-CicKNF9DbR1z0HJAXEQeQ2QJHGRcvlR8YgwLqYY97y9rO1AA7Ct6aCFUz60vaJINiuHHumPpSjdD3XMYLC5qPDL7g2wW6oZelZJN2UyvGcSGh!b4sf6djSGcS0M!*LoKeFFLgWjGjD9iE5rdb0IeyCKzcHecq92KHZgaZh2OaaywmEjWtERUKzxTK3NHgbx0uRMdQ!NFUmiBJXuztIroYgshxXzrABTsaxHBDqr!ZOCRpv4FW7X88HcBgAYSmULF8cqJ04Yby94LmEuosRos!MbYNW161cD9HxHUzhn1KkUuoxYpfI0NVtG61vgN79SjOIduYXYGQ!UWzvKTQTZemZ3ydvjKaqo45NWHIy1uV7r0gdOms0bpk4aSJEDTTgPShgFQ2jcHthG1eLKcqrcKqSC4*gas*yWVjFaz0aWVIdKygp6GsSWEqJgHlDF*sRyMLQ$$",
+    "user_properties": "{}",
+    "meta": {
+        "type": "Xbox",
+        "access_token_expires_in": 1756714331,
+        "demo": false
+    },
+    "xboxAccount": {
+        "xuid": "2535424457171863",
+        "gamertag": "plainprince6565",
+        "ageGroup": "Child"
+    },
+    "profile": {
+        "skins": [
+            {
+                "id": "17b28f17-0f46-4cbc-a3af-20053d6d3709",
+                "state": "ACTIVE",
+                "url": "http://textures.minecraft.net/texture/dc0e5054a68912a8a650a0876d0e7d7bdea01b98660caaa0eaa9e6af0d4d3f5a",
+                "textureKey": "dc0e5054a68912a8a650a0876d0e7d7bdea01b98660caaa0eaa9e6af0d4d3f5a",
+                "variant": "CLASSIC",
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACcElEQVR4Xu2ZzU3DQBCFc04DKROqQEARUAMlcOGQIxIdpIQoEhwSGItBy+f98WTtjTfrJz2J7MxO3nu2g2WvVgl8vrydcsh51UFMfL2+e6kmue7WOa86pAym6pxXHVIGU3XOqw4pg6k651WHlMFUnfOqQ8pgqs551UFNxkjjVQVAM6WpOva3D6fD43N2YDJDZnE9CBHBI+cewanrrpbcEMzmBSmBU9dFg2tc/jabWP3fZwoiJXDquurIPfqKzvzN/fA5MYE/5Y76+XD31DFUJ4cEMMbRV/jOgti8rpYSOHVdhYxx9BXVXgKDRUdgnqMiL0XquTg2m83J5fF4/ON2u00K5n4rOY9gP88q9pvBLzg3AHefkHND5DyC/bMMQPv3Nw8dLSFwHsH+JQAx/vZxfgAc6HK9Xg9aI3MCGJv02wM3uPSZ9a2RSwCtByBkAKyXIv32wA0ufWZ9az4KNAAB66VIvz1wg0ufWd9aiBoA10uSfnvgBpc+s761GJsP4NKk3x64waXPrG9tzqTfHrhBGPu3dXUBqFkf5dZXuNvtOupnt4dfODZ5r28l/fZA080FEML+9j5vQO1YAvgJQMj1Ba1DLoumz4zmA2javKD5AJq/BJYAfm8xmw1B7xCbDUAwxV3i7F+aTgk9q1yOHfCsEQuge6ScAX7XLBELoDhyBfCBBh+gsJ/gfgbD/tHRfAD6C99sALmggasMwP3RomDLY3NLb4jUVgRLAEsASwBtByDQECjIYsrSGyJ1FUPzAQgkBAqymLL0hkhNxUFBFlOW3hCppzgoSDj0zfFVBJB6fR6j9PJW18pc0I8Zlw6Aeqz4BlWcgTmmqR0WAAAAAElFTkSuQmCC"
+            }
+        ],
+        "capes": [
+            {
+                "id": "2ed5269a-076e-4a3c-834a-2837d5b578f2",
+                "state": "INACTIVE",
+                "url": "http://textures.minecraft.net/texture/28de4a81688ad18b49e735a273e086c18f1e3966956123ccb574034c06f5d336",
+                "alias": "Pan",
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAACWElEQVR4Xu2Xv0ocURTGF58hFiYg9nkCi3R5Apu8gp2dYAJiYxEklUUIJIIQLWKzFiFhQVhsBLXYJRvdhbAa10KIiBapR3+znMvJyawzrnOH1b0ffOz8c858v3vunbFUutFa/SDC77a2Ey3n5ze/ZTL3fDB6W6lG3ztnsQn5YWffBWebY3LeBr3Nts7ASgBU/1w6CNr6nA2JZ9c3nPMEcLDyLNpZenLv+6QKAOV2Jw6Jd6dLUftsIjo+nYi35TjX9AqeJ4DfX19GGADU//Kq1Pe9Mkl3AAXxSe1pbNlP6oCZj6v/OU8AEt57J2gAh2+6gTsroy48x2wHMNo2fB4ACH5UnnTh68ujxQCQKfBzrhu49Xnc/XIsKwA9DWydLJLwGBgAwDyHNwg8rAAgtBStv+5uU9xOAV8AJDw1AdCpTDkg3gFgRpviuLEwEv8CwXaADa7dLwBqaQAyDbDse4EgADYOf7nAtgN4HRYJQMLTAdjrNOBhCY+kkO0ApL8EbWhtmQa2TprOLxbjV6+8fajNmqAB1N6P3fm+qdIABIK2qAgAGkIvALl3AQ/7aa8W/bj668JacY5ruLbXAqgBYFsnTRYAXQAAFkO9FngDwAg3m81Ecz4rAIFg66SJ4OIkALIueAXAVMDyf4DsC4As4e8LQH+BMuLyVagXx1w/jy0ACc+xIgEgHVQAyDZfhF7XgCRrKEUBYB1orb34B4Qe+dwBDJpkMdTBvY3+IIq2t10go687wv7do1ISBL4FhqIDEEEby88Tu8Be+2ilIQxd+KCgoKCgoKCgoAJ0DV4O6JrwizEZAAAAAElFTkSuQmCC"
+            },
+            {
+                "id": "b9d4f2e0-6109-43f7-97aa-84250ce3c1dd",
+                "state": "INACTIVE",
+                "url": "http://textures.minecraft.net/texture/5ec930cdd2629c8771655c60eebeb867b4b6559b0e6d3bc71c40c96347fa03f0",
+                "alias": "Common",
+                "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAACdUlEQVR4XuWZMUvEQBCF78xfkANBlOMaCxVBG0uxEG3E6uwFG0GbK8QfYG+pjfhLY16St8zNbM7c5jZEtnhsMkl2932ZneQuozzPR1vvuzk0fp7k44ftZRUxHr852mkl9NlGq657uT7JHy8PW/cVKme+DQDo4mDSSnqgJvnM9ykHIPvYbwSAY7EAUHenezmlMyMmoBJA9jmtALztVBCkilj2NTUAMCluz+dzE9MD/SUYl+Pen88MEH3NJlQBKMzDpIMgxDizQBqVrY7pgdqIwNGyTwAADECOAaFcg9nPrDLJlqbZ1nGfUbSYIMS7HwqgrEOEX2eBhBANgBeCankexLsBozTPCXYFIAsyngKLxcJBjgqghFCnevZdm69beY6UNC+hhAJgrZFZAAjoN1YWOADs3KemYxLApjLAQajrAQCwb2aEvq6LHAA5kDbJu6DjWjwWCoDmJQQ5rxhZ4ADgzQt0pSEOvi6A0AmWRVc8cn0QogBApwBA0fTr7ZlLO20Q+1j3TRD0QG1EAEu1QBVDzC+0f58MAJjGPgbENvd9AHzqAgAyy6CuAzTObNTXhcoBQMdPV8fOMDOAWdAnAL0MegEgTaPloKsAaBB8FHaZYAkA7x59ZwCEtKd5mubP0iYAerszgNq8hMCbI8fS14VqaQnIu+mTNrlKeqB1JM1DLLZRAOjAEKQzQGZgGgC4DAqxBsglgG19TahMYAgqAXhqAN4EN/1XmQkMRVwGshijSKPV53aRCQxFzADefRhHBujzusoEUpMJpCYTSE0mkJpMIDWZQGoygdRkAqnJBFLTSH7d4RsX/3rmx9HyExm/FBVvaLqT/6xfHK7pFAkktW0AAAAASUVORK5CYII="
+            }
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "memory": {
+        "min": "6G",
+        "max": "12G"
+    },
+    "java": {
+        "customPath": null,
+        "autoDetect": true
+    },
+    "jvm": {
+        "customArgs": [],
+        "gc": "G1GC",
+        "gcArgs": "-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M",
+        "optimizations": true
+    },
+    "game": {
+        "fullscreen": false,
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "keepLauncherOpen": true
+    },
+    "performance": {
+        "allocation": "ultra",
+        "fpsLimit": 0,
+        "vSync": true
+    },
+    "advanced": {
+        "javaArgs": "",
+        "gameArgs": "",
+        "environmentVars": {},
+        "workingDirectory": "./minecraft"
+    }
+}
