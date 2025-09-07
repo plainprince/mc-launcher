@@ -1,0 +1,62 @@
+[package]
+name = "minecraft-launcher-lib"
+version = "0.1.0"
+edition = "2021"
+authors = ["Simeon Kummer"]
+description = "A comprehensive Minecraft launcher library written in Rust"
+license = "MIT"
+repository = "https://github.com/simeonkummer/mc-launcher"
+keywords = ["minecraft", "launcher", "game", "mod-loader"]
+categories = ["games", "api-bindings"]
+
+[lib]
+name = "minecraft_launcher_lib"
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "stream"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha1 = "0.10"
+thiserror = "1.0"
+log = "0.4"
+urlencoding = "2.1.3"
+uuid = { version = "1.0", features = ["v4"] }
+zip = "2"
+flate2 = "1.0"
+tar = "0.4"
+futures = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+dirs = "5.0"
+env_logger = "0.10"
+
+[dev-dependencies]
+tempfile = "3.8"
+criterion = "0.5"
+pretty_assertions = "1.4"
+
+[[example]]
+name = "basic_launch"
+path = "examples/basic_launch.rs"
+
+[[example]]
+name = "auth_example"
+path = "examples/auth_example.rs"
+
+[[example]]
+name = "mod_loader_example"
+path = "examples/mod_loader_example.rs"
+
+[[example]]
+name = "download_example"
+path = "examples/download_example.rs"
+
+[features]
+default = ["all-loaders"]
+all-loaders = ["forge", "fabric", "quilt", "neoforge"]
+forge = []
+fabric = []
+quilt = []
+neoforge = []
+legacy-fabric = []
